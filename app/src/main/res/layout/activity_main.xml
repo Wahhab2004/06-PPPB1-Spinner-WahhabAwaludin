@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Pemesanan"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="Tiket Kereta"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:padding="16dp"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="60dp"
+        android:drawableStart="@drawable/baseline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Nama Pemesan"
+        android:elevation="10dp"
+        android:background="@drawable/rounded_corners"/>
+
+    <EditText
+        android:id="@+id/jamKeberangkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jam Keberangkatan"
+        android:textAlignment="textStart"
+        android:background="@drawable/rounded_corners"
+        android:padding="16dp"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/baseline_access_time_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"/>
+    <EditText
+        android:id="@+id/tanggalKeberangkatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pilih Tanggal Keberangkatan"
+        android:textAlignment="textStart"
+        android:background="@drawable/rounded_corners"
+        android:padding="16dp"
+        android:layout_marginHorizontal="36dp"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/baseline_calendar_month_24"
+        android:drawablePadding="10dp"
+        android:elevation="10dp"/>
+
+    <!-- Tujuan -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginHorizontal="36dp"
+        android:padding="8dp"
+        android:layout_marginTop="15dp"
+        android:elevation="10dp">
+
+        <!-- Ikon Lokasi -->
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_marginLeft="4dp"
+            android:layout_width="30dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/baseline_location_on_24" />
+
+        <TextView
+            android:id="@+id/spinner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tujuan"
+            android:padding="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true" /> <!-- Agar bisa mendapatkan fokus -->
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" /> <!-- Mengisi ruang yang tersisa -->
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/showCustomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="Pesan Tiket"
+        android:background="@drawable/rounded_corners"/>
+
+
+
+</LinearLayout>
